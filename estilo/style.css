@@ -10,7 +10,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #000000;
     background-color: #f4f4f4;
     display: flex; /* Ajuda a manter o rodapé no final */
     flex-direction: column;
@@ -43,8 +43,8 @@ h1, h2, h3 {
    ========================================= */
 .btn {
     display: inline-block;
-    background: #ff6347;
-    color: #fff;
+    background: #050609;
+    color: #ffffff;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
@@ -54,21 +54,21 @@ h1, h2, h3 {
 }
 
 .btn:hover {
-    background: #e0553c;
+    background: #2851ca;
 }
 
 .btn-secondary {
-    background: #555;
+    background: #09212b;
 }
 .btn-secondary:hover {
-    background: #444;
+    background:#09212b;
 }
 
 /* =========================================
    3. CABEÇALHO E NAVEGAÇÃO
    ========================================= */
 .cabecalho {
-    background-color: #333;
+    background-color: #09212b;
     color: white;
     position: sticky;
     top: 0;
@@ -98,11 +98,11 @@ h1, h2, h3 {
 }
 
 .menu a:hover {
-    border-bottom-color: #ff6347;
+    border-bottom-color: #4784ff;
 }
 
 .menu a.active {
-    border-bottom-color: #ff6347;
+    border-bottom-color: #4759ff;
     font-weight: bold;
 }
 
@@ -112,7 +112,7 @@ h1, h2, h3 {
 
 /* Página Inicial - Hero Section */
 .secao-hero {
-    background: #333;
+    background: #09212b;
     color: #fff;
     min-height: 70vh;
     display: flex;
@@ -139,7 +139,7 @@ h1, h2, h3 {
     width: 150px;
     height: 180px;
     border-radius: 50%;
-    border: 5px solid #ff6347;
+    border: 5px solid #ffffff;
     margin-bottom: 20px;
 }
 
@@ -159,7 +159,7 @@ h1, h2, h3 {
     border-radius: 5px;
 }
 .skill-level {
-    background-color: #ff6347;
+    background-color: #09212b;
     height: 20px;
     border-radius: 5px;
 }
@@ -231,7 +231,8 @@ h1, h2, h3 {
 }
 
 .info-contato {
-    margin-top: 40px;
+    margin-top: 50px;
+    text-align: center;
 }
 
 /* =========================================
@@ -243,7 +244,7 @@ h1, h2, h3 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ff6347;
+    background-color:#0e3545;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
