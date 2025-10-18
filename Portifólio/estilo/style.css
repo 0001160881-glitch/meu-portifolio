@@ -1,0 +1,317 @@
+/* =========================================
+   1. RESET BÁSICO E ESTILOS GLOBAIS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex; /* Ajuda a manter o rodapé no final */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; /* Faz o conteúdo principal crescer e empurrar o rodapé */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.secao {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* =========================================
+   2. BOTÕES E LINKS
+   ========================================= */
+.btn {
+    display: inline-block;
+    background: #ff6347;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: #e0553c;
+}
+
+.btn-secondary {
+    background: #555;
+}
+.btn-secondary:hover {
+    background: #444;
+}
+
+/* =========================================
+   3. CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+.cabecalho {
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+}
+
+#logo {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.menu a:hover {
+    border-bottom-color: #ff6347;
+}
+
+.menu a.active {
+    border-bottom-color: #ff6347;
+    font-weight: bold;
+}
+
+/* =========================================
+   4. SEÇÕES ESPECÍFICAS
+   ========================================= */
+
+/* Página Inicial - Hero Section */
+.secao-hero {
+    background: #333;
+    color: #fff;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.secao-hero h1 { color: #fff; }
+
+/* Seção Sobre */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.texto-sobre {
+    text-align: left;
+    max-width: 600px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #ff6347;
+    margin-bottom: 20px;
+}
+
+/* Habilidades */
+.habilidades-container {
+    max-width: 800px;
+    margin: auto;
+}
+.skill {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.skill h3 { margin-bottom: 5px; }
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.skill-level {
+    background-color: #ff6347;
+    height: 20px;
+    border-radius: 5px;
+}
+
+/* Projetos */
+.galeria-projetos, .galeria-projetos-expandida {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.card-projeto {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 320px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.card-projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card-projeto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.card-projeto p {
+    flex-grow: 1; /* Garante que o botão fique alinhado na base */
+}
+.btn-projeto {
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    align-self: center;
+    transition: background-color 0.3s;
+}
+.btn-projeto:hover {
+    background-color: #ff6347;
+}
+
+/* Página de Contato */
+.formulario-contato {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.info-contato {
+    margin-top: 40px;
+}
+
+/* =========================================
+   5. ELEMENTOS DIVERSOS E RODAPÉ
+   ========================================= */
+
+/* Elemento com Posicionamento Fixo */
+.elemento-destaque {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.rodape a {
+    color: #ff6347;
+    text-decoration: none;
+}
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   6. MEDIA QUERIES PARA RESPONSIVIDADE
+   ========================================= */
+
+/* Para Tablets */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .menu {
+        margin-top: 15px;
+    }
+    .sobre-container {
+        flex-direction: column;
+    }
+    .texto-sobre {
+        text-align: center;
+    }
+    /* Regra adicionada do primeiro código para tablets */
+    .galeria-projetos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Para Celulares */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    #logo {
+        font-size: 20px;
+    }
+    .menu a {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .card-projeto {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
